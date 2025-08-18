@@ -1,0 +1,36 @@
+.base {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: var(--mantine-radius-md);
+  padding: var(--mantine-spacing-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1;
+}
+
+.base * {
+  transition: all 0.2s ease-in-out;
+}
+
+.base :hover {
+  transform: scale(1.05);
+}
+
+.FRCSelected {
+  outline: 2px solid #009cd7;
+  box-shadow:
+    0 0 0 2px rgba(0, 156, 215, 0.3),
+    0 0 16px 2px #009cd7,
+    inset 0 0 16px 2px #009cd7;
+}
+
+.FTCSelected {
+  outline: 2px solid #f57e25;
+  box-shadow:
+    0 0 0 2px rgba(245, 126, 37, 0.3),
+    0 0 16px 2px #f57e25,
+    inset 0 0 16px 2px #f57e25;
+}
