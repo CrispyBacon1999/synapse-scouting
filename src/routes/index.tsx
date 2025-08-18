@@ -1,4 +1,4 @@
-import { Flex, Paper, Timeline } from "@mantine/core";
+import { Flex, Paper } from "@mantine/core";
 import { createFileRoute } from "@tanstack/react-router";
 import { EventTimeline } from "../components/event/event-timeline";
 

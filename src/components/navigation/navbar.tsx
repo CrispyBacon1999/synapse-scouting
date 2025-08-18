@@ -6,7 +6,6 @@ import {
   DatabaseIcon,
   SettingsIcon,
 } from "lucide-react";
-import { LinkButton } from "../button/link-button";
 
 export const Navbar = () => {
   // Current page for highlighting

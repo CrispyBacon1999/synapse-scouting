@@ -8,7 +8,7 @@ export const createOrganizationInWorkos = internalAction({
     name: v.string(),
     organizationType: v.union(v.literal("frc"), v.literal("ftc")),
   },
-  handler: async (ctx, args) => {
+  handler: async (_, args) => {
     const workos = new WorkOS(process.env.WORKOS_SECRET_KEY!);
 
     const organization = await workos.organizations.createOrganization({
@@ -28,7 +28,7 @@ export const assignUserToOrganization = internalAction({
     userId: v.string(),
     role: v.union(v.literal("admin"), v.literal("member")),
   },
-  handler: async (ctx, args) => {
+  handler: async (_, args) => {
     const workos = new WorkOS(process.env.WORKOS_SECRET_KEY!);
 
     await workos.userManagement.createOrganizationMembership({

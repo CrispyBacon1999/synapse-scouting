@@ -6,7 +6,7 @@ export const getTeam = internalAction({
   args: {
     teamNumber: v.number(),
   },
-  handler: async (ctx, args) => {
+  handler: async (_, args) => {
     const response = await fetch(`https://theorangealliance.org/api/team/${args.teamNumber}`, {
       headers: {
         "X-Application-Origin": "Synapse",

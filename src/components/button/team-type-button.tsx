@@ -1,4 +1,3 @@
-import { useMantineTheme } from "@mantine/core";
 import type { ReactNode } from "react";
 import { cva } from "class-variance-authority";
 import classes from "./team-type-button.module.css";
@@ -38,8 +37,6 @@ export const TeamTypeButton = ({
   type: "FRC" | "FTC";
   selected: boolean;
 }) => {
-  const theme = useMantineTheme();
-
   return (
     <button onClick={onClick} className={variants({ program: type, selected })}>
       {children}
