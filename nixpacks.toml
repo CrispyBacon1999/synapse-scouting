@@ -4,8 +4,5 @@ nixPkgs = ["bun"]
 [phases.install]
 cmds = ["bun install"]
 
-[phases.prebuild]
-cmds = ["bun run convex:deploy"]
-
 [phases.build]
-cmds = ["bun run build"]
+cmds = ["bun run convex:deploy && bun run build"]
