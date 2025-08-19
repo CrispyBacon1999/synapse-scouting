@@ -25,7 +25,7 @@ export const getActiveEvent = query({
     const organization = await ctx.db.query("organizations").filter((q) => q.eq(q.field("workos_id"), callingUser.org_id)).first();
 
     if (!organization) {
-      throw new Error("Organization not found");
+      return null;
     }
 
     if (!organization.currentEvent) {
